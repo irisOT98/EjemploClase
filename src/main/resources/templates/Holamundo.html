@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Hola Mundo</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <h1>Hola Mundo</h1>
+    <!-- 
+    <span th:text="${persona.name}">tunombre</span>
+    <span th:text="${persona.lastname}">tuapellido</span>
+    <span th:text="${persona.tel}">tutel</span> 
+    -->
+    <table>
+        <thead>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Telefono</th>
+        </thead>
+        <tbody>
+            <tr th:each="persona , x : ${personas}">
+                <td th:text="${persona.name}"> </td>
+                <td th:text="${persona.lastname}"> </td>
+                <td th:text="${persona.tel}"> </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
